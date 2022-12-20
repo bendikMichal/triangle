@@ -5,7 +5,6 @@ from random import *
 pygame.init()
 
 width, height = 640, 480
-win = pygame.display.set_mode((width, height))
 
 clock = pygame.time.Clock()
 fps = 60
@@ -35,20 +34,20 @@ class Triangle:
         pygame.draw.lines(self.triangle, (255, 255, 255), True, self.points)
 
 t = Triangle([200, 200], [400, 200], [300, 0], width, height)
-main = True
+# main = True
 
-while main:
-    clock.tick(fps)
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            main = False
+# while main:
+#     clock.tick(fps)
+#     for event in pygame.event.get():
+#         if event.type == pygame.QUIT:
+#             main = False
 
-    t.drawNext()
+#     t.drawNext()
 
-    win.fill((0, 0, 0))
-    win.blit(t.triangle, (0, 0))
-    pygame.display.update()
+#     win.fill((0, 0, 0))
+#     win.blit(t.triangle, (0, 0))
+#     pygame.display.update()
 
 
-pygame.quit()
-sys.exit()
+# pygame.quit()
+# sys.exit()
